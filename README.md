@@ -10,3 +10,4 @@ For demostartion purposes, this code can be ran  driectly on the Ubuntu Linux OS
 2. Configure nginx
 	* Place config file in the nginx conf directory ```cp nginx/threatenrich.conf /etc/nginx/conf.d/```
 	* Make sure nginx is running ```sudo systemctl restart nginx```
+3. Next, use python pip to install python libraries ```python3 -m pip install -r requirements.txt```
