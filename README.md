@@ -14,3 +14,10 @@ For demonstration purposes, this code can be ran  directly on the Ubuntu Linux O
 	* Restart the nginx service ```sudo systemctl restart nginx```
 4. Next, use python pip to install python libraries ```python3 -m pip install -r requirements.txt```
 5. Finally, for demonstration purposes we will use screen to run the script in the background ```screen -dmSL threatenrich python3 threatenrich-demo.py ```
+
+To test the new HTTP API, use the following curl command.
+``curl --location --request POST 'https://<HOSTIP>:8443/file/enrichment' --header 'Content-Type: application/json' --data-raw '{
+    "ipaddress": "72.21.81.240",
+    "filehashMD5": "3848a99f2efb923a79e7d47577ae9599",
+    "domain":"atmape.ru"
+}'``
