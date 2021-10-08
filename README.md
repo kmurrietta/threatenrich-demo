@@ -13,7 +13,16 @@ For demonstration purposes, this code can be ran  directly on the Ubuntu Linux O
 	* For demonstration purposes, create a self sign cert ```sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt```
 	* Restart the nginx service ```sudo systemctl restart nginx```
 4. Next, use python pip to install python libraries ```python3 -m pip install -r requirements.txt```
-5. Finally, for demonstration purposes we will use screen to run the script in the background ```screen -dmSL threatenrich python3 threatenrich-demo.py ```
+5. Configure API keys for the following services
+	* VirusTotal https://www.virustotal.com/
+	* Shodan https://www.shodan.io/
+	* Risk IQ https://community.riskiq.com/login
+6. Place the API keys in threatenrich-demo.py
+	``VT_API=""
+	  SHODAN_API = ""
+	  RISKIQ_API = ""
+	  RISKIQ_USERNAME = ""``
+8. Finally, for demonstration purposes we will use screen to run the script in the background ```screen -dmSL threatenrich python3 threatenrich-demo.py ```
 
 To test the new HTTP API, use the following curl command.
 ``curl --location --request POST 'https://<HOSTIP>:8443/file/enrichment' --header 'Content-Type: application/json' --data-raw '{
