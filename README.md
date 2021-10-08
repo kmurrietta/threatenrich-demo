@@ -8,4 +8,4 @@ For demostartion purposes, this code can be ran  driectly on the Ubuntu Linux OS
 
 1. Install dependencies using apt ```sudo apt install redis nginx```
 2. Configure nginx
-  * Place config file in the nginx conf directory ```cp nginx/threatenrich.conf /etc/nginx/conf.d/```
+	* Place config file in the nginx conf directory ```cp nginx/threatenrich.conf /etc/nginx/conf.d/```
