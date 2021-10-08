@@ -17,7 +17,7 @@ For demonstration purposes, this code can be ran  directly on the Ubuntu Linux O
 	* VirusTotal https://www.virustotal.com/
 	* Shodan https://www.shodan.io/
 	* Risk IQ https://community.riskiq.com/login
-6. Place the API keys in threatenrich-demo.py
+6. Place the API keys in threatenrich-demo.py confg section
 	``VT_API=""
 	  SHODAN_API = ""
 	  RISKIQ_API = ""
