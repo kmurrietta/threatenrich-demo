@@ -17,16 +17,16 @@ For demonstration purposes, this code can be ran  directly on the Ubuntu Linux O
 	* VirusTotal https://www.virustotal.com/
 	* Shodan https://www.shodan.io/
 	* Risk IQ https://community.riskiq.com/login
-6. Place the API keys in threatenrich-demo.py confg section
-	``VT_API=""
-	  SHODAN_API = ""
-	  RISKIQ_API = ""
-	  RISKIQ_USERNAME = ""``
-8. Finally, for demonstration purposes we will use screen to run the script in the background ```screen -dmSL threatenrich python3 threatenrich-demo.py ```
+6. Place the API keys in threatenrich-demo.py config section
+	```python
+   	VT_API=""
+   	SHODAN_API = ""
+   	RISKIQ_API = ""
+   	RISKIQ_USERNAME = ""
+   
+7. Finally, for demonstration purposes we will use screen to run the script in the background ```screen -dmSL threatenrich python3 threatenrich-demo.py```
 
 To test the new HTTP API, use the following curl command.
-``curl --location --request POST 'https://<HOSTIP>:8443/file/enrichment' --header 'Content-Type: application/json' --data-raw '{
-    "ipaddress": "72.21.81.240",
-    "filehashMD5": "3848a99f2efb923a79e7d47577ae9599",
-    "domain":"atmape.ru"
-}'``
+```sh
+curl --location --request POST 'https://<HOSTIP>:8443/file/enrichment' --header 'Content-Type: application/json'--data-raw '{"ipaddress": "72.21.81.240", "filehashMD5": "3848a99f2efb923a79e7d47577ae9599", "domain":"atmape.ru"}'
+```
